@@ -1,0 +1,38 @@
+@charset "ISO-8859-1";
+input[type=text] {
+    width: 100%;
+    padding: 8px 13px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+input[type=submit]{
+    width: 100%;
+    background-color: #FF6347;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+[type=reset]{
+    width: 100%;
+    background-color: #3CB371;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #FFA500;
+}
+
+input[type=reset]:hover {
+    background-color: #FFA500;
+}

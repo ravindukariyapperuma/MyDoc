@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Querys>
+
+	<!-- Create table doctor Query -->
+	<query id="create_doctor_table">
+        <![CDATA[
+            CREATE TABLE doctor(
+				doctorID varchar(10) not null,
+				doctorName varchar(20),
+				hospital varchar(15),
+				speciality varchar(15),
+				telNo varchar(15),
+				availableDay varchar(50),
+				availableTime varchar(20),
+				gender varchar(10) DEFAULT 'Male',
+				primary key (doctorID)
+			)
+        ]]>
+	</query>
+
+	<!-- DROP TABLE DOCTORS Query -->
+	<query id="drop_table">
+         <![CDATA[        
+            DROP TABLE IF EXISTS doctor 
+        ]]>
+	</query>
+
+	<!-- Select all customer orders Query -->
+	<query id="insert_doctor">
+        <![CDATA[
+          	insert into doctor (doctorID, doctorName, hospital, speciality, telNo, availableDay, availableTime, gender) 
+          	values (?, ?, ?, ?, ?, ?, ?, ?)
+        ]]>
+	</query>
+
+	<!-- Select a particular doctor by id Query -->
+	<query id="doctor_by_id">
+         <![CDATA[        
+            select * from doctor where doctor.doctorID = ?
+        ]]>
+	</query>
+
+	<!-- Select all doctors -->
+	<query id="all_doctors">
+         <![CDATA[        
+            select * from doctor
+        ]]>
+	</query>
+
+	<!-- Delete a particular doctor by id Query -->
+	<query id="remove_doctor">
+         <![CDATA[        
+            delete from doctor where doctor.doctorID = ?
+        ]]>
+	</query>
+	
+	<!-- Update a particular employee by id Query -->
+	<query id="update_doctor">
+         <![CDATA[        
+            update doctor as e 
+            set e.doctorName = ?, e.hospital = ?, e.speciality = ?, e.telNo = ?, e.availableDay = ?, e.availableTime = ?, e.gender = ? 
+            where e.doctorID = ?
+        ]]>
+	</query>
+	
+		<!-- Get doctor IDs Query -->
+	<query id="doctor_ids">
+         <![CDATA[        
+            select e.doctorID from doctor as e
+        ]]>
+	</query>
+
+</Querys>

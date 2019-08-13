@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>OOP Doctor Web App</display-name>
+ 
+  <servlet>
+    <servlet-name>AddDoctorServlet</servlet-name>
+    <servlet-class>com.mydoc.servlet.AddDoctorServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateDoctorServlet</servlet-name>
+    <servlet-class>com.mydoc.servlet.UpdateDoctorServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteDoctorServlet</servlet-name>
+    <servlet-class>com.mydoc.servlet.DeleteDoctorServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetDoctorServlet</servlet-name>
+    <servlet-class>com.mydoc.servlet.GetDoctorServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ListDoctorServlet</servlet-name>
+    <servlet-class>com.mydoc.servlet.ListDoctorServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>AddDoctorServlet</servlet-name>
+    <url-pattern>/AddDoctorServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateDoctorServlet</servlet-name>
+    <url-pattern>/UpdateDoctorServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteDoctorServlet</servlet-name>
+    <url-pattern>/DeleteDoctorServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetDoctorServlet</servlet-name>
+    <url-pattern>/GetDoctorServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>ListDoctorServlet</servlet-name>
+    <url-pattern>/ListDoctorServlet</url-pattern>
+  </servlet-mapping>
+ 
+ 
+  <welcome-file-list>
+    <welcome-file>homeView.html</welcome-file>
+    <welcome-file>homeView.htm</welcome-file>
+    <welcome-file>homeView.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+</web-app>
+</element>
